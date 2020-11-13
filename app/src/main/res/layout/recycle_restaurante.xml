@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_restaurante"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tony" />
+
+        <TextView
+            android:id="@+id/nome_restaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOME RESTAURANTE"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/endereco_restaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"/>
+
+
+        <TextView
+            android:id="@+id/horario_restaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Horario"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

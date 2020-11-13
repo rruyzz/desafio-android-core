@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/restaurantesFragment">
+
+    <fragment
+        android:id="@+id/restaurantesFragment"
+        android:name="dominando.android.desafio.fragments.RestaurantesFragment"
+        android:label="fragment_restaurantes"
+        tools:layout="@layout/fragment_restaurantes" >
+        <action
+            android:id="@+id/action_restaurantesFragment_to_cardapioFragment"
+            app:destination="@id/cardapioFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cardapioFragment"
+        android:name="dominando.android.desafio.fragments.CardapioFragment"
+        android:label="fragment_cardapio"
+        tools:layout="@layout/fragment_cardapio" >
+        <action
+            android:id="@+id/action_cardapioFragment_to_restaurantesFragment"
+            app:destination="@id/restaurantesFragment" />
+        <argument
+            android:name="restaurantes"
+            app:argType="dominando.android.desafio.Restaurantes" />
+        <action
+            android:id="@+id/action_cardapioFragment_to_pratoFragment"
+            app:destination="@id/pratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pratoFragment"
+        android:name="dominando.android.desafio.fragments.PratoFragment"
+        android:label="fragment_prato"
+        tools:layout="@layout/fragment_prato" >
+        <action
+            android:id="@+id/action_pratoFragment_to_cardapioFragment"
+            app:destination="@id/cardapioFragment" />
+    </fragment>
+</navigation>
